@@ -2,9 +2,9 @@ def find_uniq(arr)
   arr.group_by(&:itself).transform_values(&:count).key(1)
 end
 
-# def find_uniq(arr)
-#   arr.uniq.each { |x| return x if arr.count(x) == 1 }
-# end
+def stray (numbers)
+  numbers.tally.key(1)
+end
 
 ind_uniq([1,1,1,1,0])
 ind_uniq([ 1, 1, 1, 2, 1, 1 ])
